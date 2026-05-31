@@ -32,7 +32,8 @@ export class HeroComponent {
   ];
 
   // TODO: decorative vertical text on the right.
-  protected readonly decorativeText = 'scroll ↓ to explore';
+  // The element is rotated 90deg, so a "→" in source renders as a downward arrow.
+  protected readonly decorativeText = 'scroll → to explore';
 
   reveal(): void {
     this.revealState.set('visible');
