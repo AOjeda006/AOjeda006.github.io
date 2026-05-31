@@ -118,3 +118,16 @@ En **Settings → Pages** del repositorio, selecciona:
   - Nav con fondo `backdrop-filter: blur` al hacer scroll.
 - Diseño responsive con menú hamburguesa en móvil.
 - `ChangeDetectionStrategy.OnPush` + signals en todos los componentes.
+
+
+---
+
+## Licencia
+
+Este proyecto está licenciado bajo la **PolyForm Noncommercial License 1.0.0**.
+Puedes ver, ejecutar, estudiar y modificar el código con fines **no comerciales**
+(estudio personal, educación, evaluación), pero **cualquier uso comercial requiere
+permiso escrito del autor**. Consulta el archivo [LICENSE.md](LICENSE.md) para los
+términos completos.
+
+© 2026 Andrés Ojeda Rodríguez. Todos los derechos no concedidos expresamente quedan reservados.
