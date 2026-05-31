@@ -26,9 +26,9 @@ export class HeroComponent {
 
   // TODO: tweak each line of the giant headline.
   protected readonly headlineLines: readonly string[] = [
-    'Construyo',
-    'experiencias',
-    'digitales.',
+    'Backend que',
+    'conecta',
+    'sistemas.',
   ];
 
   // TODO: decorative vertical text on the right.
