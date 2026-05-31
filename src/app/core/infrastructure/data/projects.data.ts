@@ -1,49 +1,49 @@
 import { Project } from '../../domain/models/project.model';
 
-// TODO: Replace these sample projects with your own work.
+// TODO: Replace these sample projects with your own backend/integration work.
 export const PROJECTS: readonly Project[] = [
   {
     id: 'project-1',
     index: 1,
-    category: 'web app',
-    title: 'Plataforma SaaS de analítica',
+    category: 'middleware',
+    title: 'Middleware de interoperabilidad de datos',
     description:
-      'Dashboard en tiempo real con gráficas interactivas y arquitectura ' +
-      'hexagonal. Optimizado para grandes volúmenes de datos.',
-    technologies: ['Angular', 'NgRx', 'D3.js', 'WebSockets'],
-    githubUrl: 'https://github.com/tu-usuario/proyecto-1',
+      'Capa de integración que conecta sistemas heterogéneos: transforma, ' +
+      'valida y enruta mensajes entre servicios con garantías de entrega.',
+    technologies: ['Node.js', 'REST', 'Message Queues', 'Docker'],
+    githubUrl: 'https://github.com/AOjeda006',
   },
   {
     id: 'project-2',
     index: 2,
-    category: 'mobile',
-    title: 'App de fitness multiplataforma',
+    category: 'api',
+    title: 'API REST por capas',
     description:
-      'Aplicación híbrida con seguimiento de rutinas, sincronización offline ' +
-      'y notificaciones push.',
-    technologies: ['Ionic', 'Capacitor', 'TypeScript'],
-    githubUrl: 'https://github.com/tu-usuario/proyecto-2',
+      'Backend escalable con autenticación JWT y arquitectura limpia, ' +
+      'pensado para mantenibilidad y testabilidad a largo plazo.',
+    technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker'],
+    githubUrl: 'https://github.com/AOjeda006',
   },
   {
     id: 'project-3',
     index: 3,
-    category: 'open source',
-    title: 'Librería de componentes UI',
+    category: 'integración',
+    title: 'Conector de sincronización de datos',
     description:
-      'Sistema de diseño accesible y temable publicado en npm, con ' +
-      'documentación interactiva y tests automatizados.',
-    technologies: ['Angular', 'Storybook', 'Jest'],
-    githubUrl: 'https://github.com/tu-usuario/proyecto-3',
+      'Proceso ETL que sincroniza información entre plataformas dispares, ' +
+      'normalizando esquemas y resolviendo conflictos de forma automática.',
+    technologies: ['Node.js', 'ETL', 'SQL', 'Cron'],
+    githubUrl: 'https://github.com/AOjeda006',
   },
   {
     id: 'project-4',
     index: 4,
-    category: 'api',
-    title: 'API REST de e-commerce',
+    category: 'gateway',
+    title: 'Pasarela de integración de servicios',
     description:
-      'Backend escalable con autenticación JWT, pasarela de pagos y ' +
-      'arquitectura limpia por capas.',
-    technologies: ['Node.js', 'NestJS', 'PostgreSQL', 'Docker'],
-    githubUrl: 'https://github.com/tu-usuario/proyecto-4',
+      'API Gateway que unifica el acceso a múltiples servicios internos con ' +
+      'autenticación centralizada, caché y limitación de tasa.',
+    technologies: ['Node.js', 'OAuth2', 'Redis', 'Docker'],
+    githubUrl: 'https://github.com/AOjeda006',
   },
 ];

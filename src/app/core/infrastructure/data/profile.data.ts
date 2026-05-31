@@ -5,32 +5,33 @@ import { SocialLink } from '../../domain/models/social-link.model';
 // TODO: Replace remaining placeholder values (role, bio, cv) with your real info.
 export const PROFILE: Profile = {
   fullName: 'Andrés Ojeda Rodríguez',
-  // TODO: your role / headline
-  role: 'Full-Stack Developer',
-  // TODO: your bio paragraph
+  role: 'Desarrollador Backend · Interoperabilidad de datos',
   bio:
-    'Desarrollador apasionado por construir productos digitales con foco en la ' +
-    'arquitectura limpia, el rendimiento y el detalle visual. Disfruto convirtiendo ' +
-    'ideas complejas en interfaces simples y memorables.',
-  // TODO: your tech stack pills
+    'Desarrollador backend centrado en la integración e interoperabilidad de datos ' +
+    'entre sistemas. Diseño APIs y middlewares robustos que hacen que aplicaciones ' +
+    'heterogéneas se comuniquen de forma fiable y mantenible. Vengo del mundo ' +
+    'full-stack, así que también me muevo con soltura en el front cuando el proyecto ' +
+    'lo pide.',
+  // TODO: confirma que esta sea tu stack real de backend/integración.
   technologies: [
-    'Angular',
-    'TypeScript',
-    'RxJS',
+    'Java',
+    'Spring Boot',
     'Node.js',
+    'REST APIs',
+    'SQL',
+    'Docker',
     'Clean Architecture',
-    'SCSS',
-    'Figma',
+    'Angular',
   ],
   // TODO: drop your CV in /public and update the file name if needed
   cvUrl: 'cv.pdf',
 };
 
-// TODO: tune these numbers to your career
+// TODO: ajusta estos números a tu trayectoria real.
 export const STATS: readonly Stat[] = [
-  { id: 'experience', value: 5, suffix: '+', label: 'Años de experiencia' },
-  { id: 'projects', value: 30, suffix: '+', label: 'Proyectos entregados' },
-  { id: 'clients', value: 12, suffix: '', label: 'Clientes satisfechos' },
+  { id: 'experience', value: 3, suffix: '+', label: 'Años en backend' },
+  { id: 'integrations', value: 20, suffix: '+', label: 'APIs e integraciones' },
+  { id: 'systems', value: 10, suffix: '+', label: 'Sistemas conectados' },
 ];
 
 export const SOCIAL_LINKS: readonly SocialLink[] = [
