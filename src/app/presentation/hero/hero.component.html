@@ -1,0 +1,30 @@
+<section
+  id="hero"
+  class="hero"
+  appReveal
+  [@fadeUp]="revealState()"
+  (revealed)="reveal()"
+>
+  <div class="hero__inner">
+    <p class="hero__eyebrow">{{ profile.role }}</p>
+
+    <h1 class="hero__title">
+      @for (line of headlineLines; track line) {
+        <span class="hero__title-line">{{ line }}</span>
+      }
+    </h1>
+
+    <p class="hero__subtitle">{{ profile.bio }}</p>
+
+    <div class="hero__actions">
+      <button type="button" class="btn btn--primary" (click)="goToProjects()">
+        Ver proyectos
+      </button>
+      <button type="button" class="btn btn--ghost" (click)="goToContact()">
+        Hablemos
+      </button>
+    </div>
+  </div>
+
+  <span class="hero__decoration" aria-hidden="true">{{ decorativeText }}</span>
+</section>

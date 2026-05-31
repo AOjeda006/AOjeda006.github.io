@@ -1,0 +1,36 @@
+<section id="projects" class="projects" appReveal (revealed)="reveal()">
+  <div class="projects__inner">
+    <div class="projects__head" [@fadeUp]="revealState()">
+      <p class="section-tag">// proyectos</p>
+      <h2 class="section-title">Trabajo seleccionado</h2>
+    </div>
+
+    @if (revealState() === 'visible') {
+      <div class="projects__grid" [@listStagger]>
+        @for (project of projects; track project.id) {
+          <a
+            class="card"
+            [href]="project.githubUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="card__index" aria-hidden="true">
+              {{ formatIndex(project.index) }}
+            </span>
+            <span class="card__category">{{ project.category }}</span>
+            <h3 class="card__title">{{ project.title }}</h3>
+            <p class="card__desc">{{ project.description }}</p>
+
+            <ul class="card__tech">
+              @for (tech of project.technologies; track tech) {
+                <li class="chip">{{ tech }}</li>
+              }
+            </ul>
+
+            <span class="card__link">Ver en GitHub →</span>
+          </a>
+        }
+      </div>
+    }
+  </div>
+</section>
