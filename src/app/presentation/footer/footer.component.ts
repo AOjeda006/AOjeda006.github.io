@@ -12,5 +12,5 @@ export class FooterComponent {
 
   // TODO: customise the footer texts.
   protected readonly leftText = 'Diseñado y construido con Angular';
-  protected readonly rightText = 'Tu Nombre';
+  protected readonly rightText = 'Andrés Ojeda Rodríguez';
 }
