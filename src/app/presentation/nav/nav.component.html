@@ -1,0 +1,30 @@
+<nav class="nav" [class.nav--scrolled]="scrolled()">
+  <div class="nav__inner">
+    <button type="button" class="nav__logo" (click)="navigateTo('hero')">
+      {{ brand }}
+    </button>
+
+    <ul class="nav__links" [class.nav__links--open]="menuOpen()">
+      @for (link of links; track link.id) {
+        <li>
+          <button type="button" class="nav__link" (click)="navigateTo(link.id)">
+            {{ link.label }}
+          </button>
+        </li>
+      }
+    </ul>
+
+    <button
+      type="button"
+      class="nav__burger"
+      [class.nav__burger--open]="menuOpen()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-label="Alternar menú de navegación"
+      (click)="toggleMenu()"
+    >
+      <span class="nav__burger-bar"></span>
+      <span class="nav__burger-bar"></span>
+      <span class="nav__burger-bar"></span>
+    </button>
+  </div>
+</nav>
