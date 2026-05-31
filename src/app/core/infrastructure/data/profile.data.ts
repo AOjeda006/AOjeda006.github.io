@@ -2,10 +2,9 @@ import { Profile } from '../../domain/models/profile.model';
 import { Stat } from '../../domain/models/stat.model';
 import { SocialLink } from '../../domain/models/social-link.model';
 
-// TODO: Replace every value below with your real information.
+// TODO: Replace remaining placeholder values (role, bio, cv) with your real info.
 export const PROFILE: Profile = {
-  // TODO: your full name
-  fullName: 'Tu Nombre',
+  fullName: 'Andrés Ojeda Rodríguez',
   // TODO: your role / headline
   role: 'Full-Stack Developer',
   // TODO: your bio paragraph
@@ -34,27 +33,26 @@ export const STATS: readonly Stat[] = [
   { id: 'clients', value: 12, suffix: '', label: 'Clientes satisfechos' },
 ];
 
-// TODO: point these to your real accounts
 export const SOCIAL_LINKS: readonly SocialLink[] = [
   {
     id: 'email',
     kind: 'email',
     label: 'Email',
-    value: 'tunombre@email.com',
-    url: 'mailto:tunombre@email.com',
+    value: 'andresojedarodriguez@gmail.com',
+    url: 'mailto:andresojedarodriguez@gmail.com',
   },
   {
     id: 'github',
     kind: 'github',
     label: 'GitHub',
-    value: '@tu-usuario',
-    url: 'https://github.com/tu-usuario',
+    value: '@AOjeda006',
+    url: 'https://github.com/AOjeda006',
   },
   {
     id: 'linkedin',
     kind: 'linkedin',
     label: 'LinkedIn',
-    value: 'in/tu-usuario',
-    url: 'https://www.linkedin.com/in/tu-usuario',
+    value: 'Andrés Ojeda Rodríguez',
+    url: 'https://www.linkedin.com/in/andr%C3%A9s-ojeda-rodr%C3%ADguez-6570022ab/',
   },
 ];
