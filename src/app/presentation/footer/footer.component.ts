@@ -10,6 +10,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 export class FooterComponent {
   protected readonly year = new Date().getFullYear();
 
-  protected readonly leftText = 'Diseñado y construido con Angular';
+  protected readonly leftText = 'Disponible para nuevas oportunidades';
   protected readonly rightText = 'Andrés Ojeda Rodríguez';
 }

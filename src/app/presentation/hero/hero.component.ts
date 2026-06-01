@@ -24,6 +24,10 @@ export class HeroComponent {
   protected readonly profile = inject(GetProfileUseCase).execute();
   protected readonly revealState = signal<'hidden' | 'visible'>('hidden');
 
+  // Eslogan corto del hero (el bio completo se muestra solo en "Sobre mí").
+  protected readonly subtitle =
+    'Aplicaciones de extremo a extremo, del backend al front y al móvil.';
+
   protected readonly headlineLines: readonly string[] = [
     'Backend que',
     'conecta',

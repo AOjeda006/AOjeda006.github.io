@@ -6,21 +6,22 @@ export const PROFILE: Profile = {
   fullName: 'Andrés Ojeda Rodríguez',
   role: 'Desarrollador Backend & Full-Stack',
   bio:
-    'Desarrollador full-stack con foco en backend, titulado en Desarrollo de ' +
-    'Aplicaciones Multiplataforma. Construyo aplicaciones bien estructuradas y ' +
-    'mantenibles aplicando SOLID y Clean Architecture, desde la API hasta el front ' +
+    'Desarrollador full-stack especializado en backend, titulado en Desarrollo de ' +
+    'Aplicaciones Multiplataforma. Capaz de construir aplicaciones bien estructuradas ' +
+    'y mantenibles aplicando SOLID y Clean Architecture, desde la API hasta el front ' +
     'web (Angular) y las apps móviles —Android nativo con Kotlin/Jetpack Compose y ' +
-    'multiplataforma con Flutter—. En Accenture trabajé en interoperabilidad de datos ' +
-    'sanitarios (HL7 v2 y FHIR R5), migrando y mapeando información clínica entre ambos ' +
-    'estándares con Java, HAPI y Kafka.',
+    'multiplataforma con Flutter / React Native—. En Accenture trabajé en ' +
+    'interoperabilidad de datos sanitarios (HL7 v2 y FHIR R5), migrando y mapeando ' +
+    'información clínica entre ambos estándares con Java, HAPI y Kafka.',
   technologies: [
     'Java',
     'Spring',
-    'C# / .NET',
+    'C# / ASP.NET',
     'Python / FastAPI',
     'Node.js / NestJS',
     'TypeScript',
     'Angular',
+    'React Native',
     'Kotlin / Jetpack Compose',
     'Flutter',
     'SQL & MongoDB',
@@ -33,7 +34,7 @@ export const PROFILE: Profile = {
 export const STATS: readonly Stat[] = [
   { id: 'projects', value: 5, suffix: '', label: 'Proyectos públicos' },
   { id: 'languages', value: 7, suffix: '', label: 'Lenguajes de programación' },
-  { id: 'stacks', value: 6, suffix: '', label: 'Frameworks y stacks' },
+  { id: 'stacks', value: 7, suffix: '', label: 'Frameworks y stacks' },
 ];
 
 export const SOCIAL_LINKS: readonly SocialLink[] = [
