@@ -1,0 +1,16 @@
+{
+  "name": "Andrés Ojeda Rodríguez · Portfolio",
+  "short_name": "AOR",
+  "theme_color": "#0a0a0f",
+  "background_color": "#0a0a0f",
+  "display": "standalone",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
