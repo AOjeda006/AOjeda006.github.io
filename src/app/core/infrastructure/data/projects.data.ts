@@ -34,7 +34,7 @@ export const PROJECTS: readonly Project[] = [
       'Ajedrez multijugador en tiempo real. Servidor .NET con SignalR como ' +
       'fuente de verdad de la partida y cliente móvil en React Native, ambos ' +
       'con arquitectura por capas.',
-    technologies: ['.NET', 'SignalR', 'React Native', 'TypeScript', 'Clean Architecture'],
+    technologies: ['ASP.NET Core', 'SignalR', 'React Native', 'TypeScript', 'Clean Architecture'],
     githubUrl: 'https://github.com/AOjeda006/AjedrezOnline',
   },
   {
