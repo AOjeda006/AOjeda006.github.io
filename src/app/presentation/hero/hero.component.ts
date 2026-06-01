@@ -24,16 +24,14 @@ export class HeroComponent {
   protected readonly profile = inject(GetProfileUseCase).execute();
   protected readonly revealState = signal<'hidden' | 'visible'>('hidden');
 
-  // TODO: tweak each line of the giant headline.
   protected readonly headlineLines: readonly string[] = [
     'Backend que',
     'conecta',
     'sistemas.',
   ];
 
-  // TODO: decorative vertical text on the right.
   // The element is rotated 90deg, so a "→" in source renders as a downward arrow.
-  protected readonly decorativeText = 'scroll → to explore';
+  protected readonly decorativeText = 'desliza → para explorar';
 
   reveal(): void {
     this.revealState.set('visible');

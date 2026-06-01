@@ -18,3 +18,13 @@
   font-size: 0.8rem;
   color: var(--color-muted);
 }
+
+/* On narrow screens stack the two texts cleanly instead of letting them wrap
+   into an uneven space-between layout. */
+@media (max-width: 560px) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
