@@ -72,6 +72,9 @@
 .contact__meta {
   display: flex;
   flex-direction: column;
+  /* Allow this flex child to shrink so a long value (e.g. the email address)
+     wraps instead of widening the card and triggering horizontal scroll. */
+  min-width: 0;
 }
 
 .contact__label {
@@ -82,6 +85,7 @@
 
 .contact__value {
   font-size: 1rem;
+  overflow-wrap: anywhere;
 }
 
 .contact__cv {

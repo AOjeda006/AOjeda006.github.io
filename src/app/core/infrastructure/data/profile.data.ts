@@ -2,36 +2,38 @@ import { Profile } from '../../domain/models/profile.model';
 import { Stat } from '../../domain/models/stat.model';
 import { SocialLink } from '../../domain/models/social-link.model';
 
-// TODO: Replace remaining placeholder values (role, bio, cv) with your real info.
 export const PROFILE: Profile = {
   fullName: 'Andrés Ojeda Rodríguez',
-  role: 'Desarrollador Backend · Interoperabilidad de datos',
+  role: 'Desarrollador Backend & Full-Stack',
   bio:
-    'Desarrollador backend centrado en la integración e interoperabilidad de datos ' +
-    'entre sistemas. Diseño APIs y middlewares robustos que hacen que aplicaciones ' +
-    'heterogéneas se comuniquen de forma fiable y mantenible. Vengo del mundo ' +
-    'full-stack, así que también me muevo con soltura en el front cuando el proyecto ' +
-    'lo pide.',
-  // TODO: confirma que esta sea tu stack real de backend/integración.
+    'Desarrollador full-stack con foco en backend, titulado en Desarrollo de ' +
+    'Aplicaciones Multiplataforma. Construyo aplicaciones bien estructuradas y ' +
+    'mantenibles aplicando SOLID y Clean Architecture, desde la API hasta el front ' +
+    'web (Angular) y las apps móviles —Android nativo con Kotlin/Jetpack Compose y ' +
+    'multiplataforma con Flutter—. En Accenture trabajé en interoperabilidad de datos ' +
+    'sanitarios (HL7 v2 y FHIR R5), migrando y mapeando información clínica entre ambos ' +
+    'estándares con Java, HAPI y Kafka.',
   technologies: [
     'Java',
-    'Spring Boot',
-    'Node.js',
-    'REST APIs',
-    'SQL',
+    'Spring',
+    'C# / .NET',
+    'Python / FastAPI',
+    'Node.js / NestJS',
+    'TypeScript',
+    'Angular',
+    'Kotlin / Jetpack Compose',
+    'Flutter',
+    'SQL & MongoDB',
     'Docker',
     'Clean Architecture',
-    'Angular',
   ],
-  // TODO: drop your CV in /public and update the file name if needed
   cvUrl: 'cv.pdf',
 };
 
-// TODO: ajusta estos números a tu trayectoria real.
 export const STATS: readonly Stat[] = [
-  { id: 'experience', value: 3, suffix: '+', label: 'Años en backend' },
-  { id: 'integrations', value: 20, suffix: '+', label: 'APIs e integraciones' },
-  { id: 'systems', value: 10, suffix: '+', label: 'Sistemas conectados' },
+  { id: 'projects', value: 5, suffix: '', label: 'Proyectos públicos' },
+  { id: 'languages', value: 7, suffix: '', label: 'Lenguajes de programación' },
+  { id: 'stacks', value: 6, suffix: '', label: 'Frameworks y stacks' },
 ];
 
 export const SOCIAL_LINKS: readonly SocialLink[] = [

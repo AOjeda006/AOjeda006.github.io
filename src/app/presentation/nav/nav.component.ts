@@ -25,8 +25,7 @@ export class NavComponent {
   protected readonly scrolled = signal(false);
   protected readonly menuOpen = signal(false);
 
-  // TODO: change these brand initials to your own.
-  protected readonly brand = 'TN_';
+  protected readonly brand = 'AOR_';
 
   protected readonly links: readonly NavLink[] = [
     { id: 'about', label: 'Sobre mí' },

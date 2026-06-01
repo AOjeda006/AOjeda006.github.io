@@ -26,9 +26,12 @@
   font-weight: 800;
   line-height: 0.95;
   letter-spacing: -0.02em;
-  font-size: clamp(3rem, 11vw, 9rem);
+  /* Lower min (2.5rem) keeps the headline from wrapping awkwardly / clipping on
+     narrow phones; max (9rem) keeps the desktop look unchanged. */
+  font-size: clamp(2.5rem, 11vw, 9rem);
   margin: 0;
   color: var(--color-text);
+  overflow-wrap: break-word;
 }
 
 .hero__title-line {
@@ -66,6 +69,7 @@
   text-transform: uppercase;
   color: var(--color-muted);
   white-space: nowrap;
+  pointer-events: none;
 }
 
 @media (max-width: 720px) {

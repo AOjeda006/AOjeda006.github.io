@@ -1,49 +1,64 @@
 import { Project } from '../../domain/models/project.model';
 
-// TODO: Replace these sample projects with your own backend/integration work.
 export const PROJECTS: readonly Project[] = [
   {
-    id: 'project-1',
+    id: 'plants-app',
     index: 1,
-    category: 'middleware',
-    title: 'Middleware de interoperabilidad de datos',
+    category: 'full-stack móvil',
+    title: 'Plants App — Red social de plantas',
     description:
-      'Capa de integración que conecta sistemas heterogéneos: transforma, ' +
-      'valida y enruta mensajes entre servicios con garantías de entrega.',
-    technologies: ['Node.js', 'REST', 'Message Queues', 'Docker'],
-    githubUrl: 'https://github.com/AOjeda006',
+      'Red social full-stack para el cuidado de plantas: backend NestJS con ' +
+      'MongoDB y eventos en tiempo real (Socket.IO), y app multiplataforma en ' +
+      'Flutter. Arquitectura limpia y API documentada con OpenAPI.',
+    technologies: ['NestJS', 'TypeScript', 'MongoDB', 'Flutter', 'Socket.IO', 'Clean Architecture'],
+    githubUrl: 'https://github.com/AOjeda006/Plants_app',
   },
   {
-    id: 'project-2',
+    id: 'erp',
     index: 2,
-    category: 'api',
-    title: 'API REST por capas',
+    category: 'full-stack',
+    title: "ERP de gestión de pedidos (Nervion's System)",
     description:
-      'Backend escalable con autenticación JWT y arquitectura limpia, ' +
-      'pensado para mantenibilidad y testabilidad a largo plazo.',
-    technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker'],
-    githubUrl: 'https://github.com/AOjeda006',
+      'ERP de gestión de pedidos a proveedores. Backend ASP.NET Core 8 con ' +
+      'EF Core y arquitectura limpia, frontend Angular 18 + Material y ' +
+      'autenticación con Firebase sobre SQL Server.',
+    technologies: ['ASP.NET Core', 'Angular', 'EF Core', 'SQL Server', 'Firebase Auth', 'Angular Material'],
+    githubUrl: 'https://github.com/AOjeda006/ERP',
   },
   {
-    id: 'project-3',
+    id: 'ajedrez-online',
     index: 3,
-    category: 'integración',
-    title: 'Conector de sincronización de datos',
+    category: 'tiempo real',
+    title: 'Ajedrez Online multijugador',
     description:
-      'Proceso ETL que sincroniza información entre plataformas dispares, ' +
-      'normalizando esquemas y resolviendo conflictos de forma automática.',
-    technologies: ['Node.js', 'ETL', 'SQL', 'Cron'],
-    githubUrl: 'https://github.com/AOjeda006',
+      'Ajedrez multijugador en tiempo real. Servidor .NET con SignalR como ' +
+      'fuente de verdad de la partida y cliente móvil en React Native, ambos ' +
+      'con arquitectura por capas.',
+    technologies: ['.NET', 'SignalR', 'React Native', 'TypeScript', 'Clean Architecture'],
+    githubUrl: 'https://github.com/AOjeda006/AjedrezOnline',
   },
   {
-    id: 'project-4',
+    id: 'gestion-academica',
     index: 4,
-    category: 'gateway',
-    title: 'Pasarela de integración de servicios',
+    category: 'api rest',
+    title: 'API de gestión académica',
     description:
-      'API Gateway que unifica el acceso a múltiples servicios internos con ' +
-      'autenticación centralizada, caché y limitación de tasa.',
-    technologies: ['Node.js', 'OAuth2', 'Redis', 'Docker'],
-    githubUrl: 'https://github.com/AOjeda006',
+      'API REST de gestión académica (alumnos, cursos y matrículas). ' +
+      'Spring Boot 4 con seguridad JWT por roles, migraciones Flyway, ' +
+      'documentación Swagger y despliegue con Docker.',
+    technologies: ['Java', 'Spring Boot', 'MySQL', 'JWT', 'Flyway', 'Docker'],
+    githubUrl: 'https://github.com/AOjeda006/ProyectoSpring',
+  },
+  {
+    id: 'jetpack-stay-rooms',
+    index: 5,
+    category: 'android',
+    title: 'JetPack Stay Rooms — Reservas (Android)',
+    description:
+      'App Android nativa de reserva de habitaciones con roles cliente/' +
+      'propietario. Kotlin y Jetpack Compose, persistencia con Room, ' +
+      'arquitectura limpia y hashing seguro de contraseñas (PBKDF2).',
+    technologies: ['Kotlin', 'Jetpack Compose', 'Room', 'Android', 'Clean Architecture'],
+    githubUrl: 'https://github.com/AOjeda006/JetPackStayRooms',
   },
 ];
