@@ -4,7 +4,7 @@ import { SocialLink } from '../../domain/models/social-link.model';
 
 export const PROFILE: Profile = {
   fullName: 'Andrés Ojeda Rodríguez',
-  role: 'Desarrollador Backend & Full-Stack',
+  role: 'Desarrollador Backend, Full-Stack y Sistemas Distribuidos',
   bio:
     'Desarrollador full-stack especializado en backend, titulado en Desarrollo de ' +
     'Aplicaciones Multiplataforma. Capaz de construir aplicaciones bien estructuradas ' +
@@ -12,7 +12,9 @@ export const PROFILE: Profile = {
     'web (Angular) y las apps móviles —Android nativo con Kotlin/Jetpack Compose y ' +
     'multiplataforma con Flutter / React Native—. En Accenture trabajé en ' +
     'interoperabilidad de datos sanitarios (HL7 v2 y FHIR R5), migrando y mapeando ' +
-    'información clínica entre ambos estándares con Java, HAPI y Kafka.',
+    'información clínica entre ambos estándares con Java, HAPI y Kafka. También ' +
+    'construyo sistemas de alto rendimiento en C++ moderno, con concurrencia, I/O ' +
+    'asíncrona y consenso distribuido (Raft).',
   technologies: [
     'Java',
     'Spring',
