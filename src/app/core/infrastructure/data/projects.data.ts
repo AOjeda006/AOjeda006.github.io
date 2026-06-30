@@ -2,8 +2,21 @@ import { Project } from '../../domain/models/project.model';
 
 export const PROJECTS: readonly Project[] = [
   {
-    id: 'plants-app',
+    id: 'nexusmq',
     index: 1,
+    category: 'sistemas distribuidos',
+    title: 'NexusMQ — Broker de mensajería distribuido',
+    description:
+      'Broker de mensajería de log particionado (estilo Kafka) construido desde ' +
+      'cero en C++23. Arquitectura shared-nothing thread-per-core (un reactor por ' +
+      'núcleo sobre io_uring) y Raft por partición para replicación CP tolerante a ' +
+      'fallos, con protocolo binario propio y un subconjunto compatible con Kafka.',
+    technologies: ['C++23', 'io_uring', 'Raft', 'Coroutines', 'Kafka', 'CMake'],
+    githubUrl: 'https://github.com/AOjeda006/NexusMQ',
+  },
+  {
+    id: 'plants-app',
+    index: 2,
     category: 'full-stack móvil',
     title: 'Plants App — Red social de plantas',
     description:
@@ -15,7 +28,7 @@ export const PROJECTS: readonly Project[] = [
   },
   {
     id: 'erp',
-    index: 2,
+    index: 3,
     category: 'full-stack',
     title: "ERP de gestión de pedidos (Nervion's System)",
     description:
@@ -27,7 +40,7 @@ export const PROJECTS: readonly Project[] = [
   },
   {
     id: 'ajedrez-online',
-    index: 3,
+    index: 4,
     category: 'tiempo real',
     title: 'Ajedrez Online multijugador',
     description:
@@ -39,7 +52,7 @@ export const PROJECTS: readonly Project[] = [
   },
   {
     id: 'gestion-academica',
-    index: 4,
+    index: 5,
     category: 'api rest',
     title: 'API de gestión académica',
     description:
@@ -51,7 +64,7 @@ export const PROJECTS: readonly Project[] = [
   },
   {
     id: 'jetpack-stay-rooms',
-    index: 5,
+    index: 6,
     category: 'android',
     title: 'JetPack Stay Rooms — Reservas (Android)',
     description:

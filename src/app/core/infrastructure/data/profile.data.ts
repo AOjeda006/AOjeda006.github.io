@@ -16,6 +16,7 @@ export const PROFILE: Profile = {
   technologies: [
     'Java',
     'Spring',
+    'C++23',
     'C# / ASP.NET',
     'Python / FastAPI',
     'Node.js / NestJS',
@@ -32,8 +33,8 @@ export const PROFILE: Profile = {
 };
 
 export const STATS: readonly Stat[] = [
-  { id: 'projects', value: 5, suffix: '', label: 'Proyectos públicos' },
-  { id: 'languages', value: 7, suffix: '', label: 'Lenguajes de programación' },
+  { id: 'projects', value: 6, suffix: '', label: 'Proyectos públicos' },
+  { id: 'languages', value: 8, suffix: '', label: 'Lenguajes de programación' },
   { id: 'stacks', value: 7, suffix: '', label: 'Frameworks y stacks' },
 ];
 
