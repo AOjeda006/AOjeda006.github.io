@@ -6,7 +6,7 @@ export const CERTIFICATIONS: readonly Certification[] = [
     index: 1,
     kind: 'certificado profesional',
     title: 'IBM Mainframe Developer',
-    issuer: 'Coursera · IBM & LearnQuest',
+    issuer: 'IBM & LearnQuest (Coursera)',
     date: 'jul. 2026',
     description:
       'Certificado profesional de desarrollo en mainframe: COBOL de principio a fin ' +
@@ -28,7 +28,7 @@ export const CERTIFICATIONS: readonly Certification[] = [
     index: 2,
     kind: 'curso',
     title: 'COBOL Programming with VSCode',
-    issuer: 'Coursera · autorizado por IBM',
+    issuer: 'IBM (Coursera)',
     date: 'jul. 2026',
     description:
       'Desarrollo COBOL moderno sobre Visual Studio Code con el tooling de IBM Z ' +
