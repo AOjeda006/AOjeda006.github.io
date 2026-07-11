@@ -14,7 +14,9 @@ export const PROFILE: Profile = {
     'interoperabilidad de datos sanitarios (HL7 v2 y FHIR R5), migrando y mapeando ' +
     'información clínica entre ambos estándares con Java, HAPI y Kafka. También ' +
     'construyo sistemas de alto rendimiento en C++ moderno, con concurrencia, I/O ' +
-    'asíncrona y consenso distribuido (Raft).',
+    'asíncrona y consenso distribuido (Raft). Certificado como IBM Mainframe ' +
+    'Developer (COBOL e IBM Z), sumo la computación empresarial y el mantenimiento ' +
+    'de sistemas legados al perfil.',
   technologies: [
     'Java',
     'Spring',
@@ -28,6 +30,7 @@ export const PROFILE: Profile = {
     'Kotlin / Jetpack Compose',
     'Flutter',
     'SQL & MongoDB',
+    'COBOL / Mainframe',
     'Docker',
     'Clean Architecture',
   ],
@@ -36,7 +39,7 @@ export const PROFILE: Profile = {
 
 export const STATS: readonly Stat[] = [
   { id: 'projects', value: 6, suffix: '', label: 'Proyectos públicos' },
-  { id: 'languages', value: 8, suffix: '', label: 'Lenguajes de programación' },
+  { id: 'languages', value: 9, suffix: '', label: 'Lenguajes de programación' },
   { id: 'stacks', value: 7, suffix: '', label: 'Frameworks y stacks' },
 ];
 

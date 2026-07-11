@@ -3,6 +3,7 @@ import { NavComponent } from './presentation/nav/nav.component';
 import { HeroComponent } from './presentation/hero/hero.component';
 import { AboutComponent } from './presentation/about/about.component';
 import { ProjectsComponent } from './presentation/projects/projects.component';
+import { CertificationsComponent } from './presentation/certifications/certifications.component';
 import { ContactComponent } from './presentation/contact/contact.component';
 import { FooterComponent } from './presentation/footer/footer.component';
 
@@ -20,6 +21,7 @@ import { FooterComponent } from './presentation/footer/footer.component';
     HeroComponent,
     AboutComponent,
     ProjectsComponent,
+    CertificationsComponent,
     ContactComponent,
     FooterComponent,
   ],

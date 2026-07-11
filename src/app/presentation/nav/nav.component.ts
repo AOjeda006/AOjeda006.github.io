@@ -30,6 +30,7 @@ export class NavComponent {
   protected readonly links: readonly NavLink[] = [
     { id: 'about', label: 'Sobre mí' },
     { id: 'projects', label: 'Proyectos' },
+    { id: 'certifications', label: 'Certificaciones' },
     { id: 'contact', label: 'Contacto' },
   ];
 

@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Andrés Ojeda Rodríguez — CV</title>
+    <style>
+      /* =====================================================================
+         Fuente del CV de Andrés Ojeda Rodríguez.
+         Documento imprimible a PDF (A4, 2 páginas) con Chrome headless.
+         Ver cv/README.md para regenerar public/cv.pdf y docs/cv.pdf.
+         ===================================================================== */
+      :root {
+        --ink: #1f2933;
+        --muted: #55606b;
+        --accent: #2f6b7a; /* petróleo/teal de la marca del CV */
+        --rule: #cfd8dc;
+      }
+
+      @page {
+        size: A4;
+        margin: 14mm 15mm;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Segoe UI', Carlito, Calibri, 'Helvetica Neue', Arial, sans-serif;
+        color: var(--ink);
+        font-size: 10.4pt;
+        line-height: 1.34;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      /* -------- Cabecera -------- */
+      .name {
+        font-size: 25pt;
+        font-weight: 700;
+        color: var(--accent);
+        letter-spacing: -0.01em;
+        margin: 0;
+      }
+
+      .contact {
+        margin: 4pt 0 0;
+        font-size: 9.4pt;
+        color: var(--muted);
+      }
+
+      .contact span {
+        white-space: nowrap;
+      }
+
+      /* -------- Secciones -------- */
+      section {
+        margin-top: 13pt;
+      }
+
+      h2 {
+        font-size: 11pt;
+        font-weight: 700;
+        color: var(--accent);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 0 0 6pt;
+        padding-bottom: 3pt;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .profile {
+        text-align: justify;
+      }
+
+      /* -------- Competencias / listas etiquetadas -------- */
+      .skill {
+        margin: 0 0 4pt;
+      }
+
+      .skill b {
+        color: var(--ink);
+      }
+
+      /* -------- Certificaciones -------- */
+      .cert {
+        margin: 0 0 6pt;
+      }
+
+      .cert__head {
+        display: flex;
+        justify-content: space-between;
+        gap: 12pt;
+        align-items: baseline;
+      }
+
+      .cert__title {
+        font-weight: 700;
+      }
+
+      .cert__meta {
+        color: var(--muted);
+        font-size: 9.2pt;
+        white-space: nowrap;
+      }
+
+      .cert__detail {
+        color: var(--muted);
+        font-size: 9.4pt;
+        margin-top: 1pt;
+      }
+
+      /* -------- Experiencia -------- */
+      .job {
+        margin-bottom: 9pt;
+      }
+
+      .job__head {
+        display: flex;
+        justify-content: space-between;
+        gap: 12pt;
+        align-items: baseline;
+      }
+
+      .job__title {
+        font-weight: 700;
+      }
+
+      .job__dates {
+        color: var(--muted);
+        font-size: 9.2pt;
+        white-space: nowrap;
+      }
+
+      .job__org {
+        font-style: italic;
+        color: var(--accent);
+        font-size: 9.6pt;
+        margin: 1pt 0 3pt;
+      }
+
+      .job__lead {
+        color: var(--muted);
+        font-size: 9.4pt;
+        margin-bottom: 2pt;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 16pt;
+      }
+
+      li {
+        margin-bottom: 1.5pt;
+      }
+
+      /* -------- Formación / idiomas -------- */
+      .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12pt;
+        align-items: baseline;
+        margin-bottom: 5pt;
+      }
+
+      .row__title {
+        font-weight: 700;
+      }
+
+      .row__org {
+        font-style: italic;
+        color: var(--accent);
+        font-size: 9.6pt;
+      }
+
+      .row__dates {
+        color: var(--muted);
+        font-size: 9.2pt;
+        white-space: nowrap;
+      }
+
+      .lang {
+        margin-bottom: 3pt;
+      }
+
+      .lang b {
+        color: var(--ink);
+      }
+
+      /* Evita cortes feos de bloque entre páginas */
+      .job,
+      .cert,
+      .row {
+        break-inside: avoid;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="name">Andrés Ojeda Rodríguez</h1>
+      <p class="contact">
+        <span>Almonte (Huelva), 21730</span> &nbsp;|&nbsp;
+        <span>+34 722 35 96 90</span> &nbsp;|&nbsp;
+        <span>andresojedarodriguez@gmail.com</span> &nbsp;|&nbsp;
+        <a href="https://aojeda006.github.io/">Portfolio</a>
+      </p>
+    </header>
+
+    <section>
+      <h2>Perfil profesional</h2>
+      <p class="profile">
+        Desarrollador full-stack con capacidad para el diseño y desarrollo completo de
+        aplicaciones bien estructuradas y mantenibles, aplicando principios SOLID y Clean
+        Architecture. Con experiencia en interoperabilidad de datos sanitarios bajo los
+        estándares HL7 v2 y FHIR R5, adquirida en Accenture migrando y mapeando datos clínicos
+        entre ambos estándares. Recientemente certificado como <b>IBM Mainframe Developer</b>
+        (COBOL e IBM Z), ampliando el perfil hacia la computación empresarial y el mantenimiento
+        de sistemas legados de misión crítica. Perfil serio y profesional, con ambición y plena
+        disposición a formarse en lo que el puesto requiera.
+      </p>
+    </section>
+
+    <section>
+      <h2>Competencias técnicas</h2>
+      <p class="skill">
+        <b>Interoperabilidad de datos sanitarios (HL7/FHIR):</b> Estándares HL7 v2/v2.5 y FHIR
+        R5; modelado de perfiles y extensiones FHIR con Forge; Guías de Implementación con FSH,
+        SUSHI y Jekyll; mensajería e integración con Kafka y HAPI (Java)
+      </p>
+      <p class="skill">
+        <b>Lenguajes:</b> Java, C#, Python, Kotlin, C++, COBOL, JavaScript/TypeScript, SQL/T-SQL
+      </p>
+      <p class="skill">
+        <b>Mainframe / Enterprise computing:</b> COBOL (fundamentos, núcleo, gestión de datos y
+        ficheros, pruebas y depuración); conceptos de IBM Z y del ciclo de vida del software
+        (SDLC) en entorno mainframe; desarrollo COBOL moderno con VS Code (IBM Z Open Editor)
+      </p>
+      <p class="skill">
+        <b>Frontend:</b> Angular, React Native, Flutter, HTML, CSS, jQuery, AJAX, JSON; Jetpack
+        Compose (Android nativo)
+      </p>
+      <p class="skill">
+        <b>Backend y APIs:</b> ASP.NET (C#), Spring (Java), NestJS (Node/TypeScript), FastAPI
+        (Python); APIs REST, programación concurrente (multiprocessing), persistencia con JDBC y
+        JPA
+      </p>
+      <p class="skill">
+        <b>Bases de datos:</b> MySQL, SQL Server, MongoDB, Access; modelado Entidad-Relación,
+        normalización y modelo físico; procedimientos almacenados, funciones, triggers, cursores
+        y transacciones (T-SQL)
+      </p>
+      <p class="skill">
+        <b>Arquitectura y calidad:</b> SOLID, Clean Architecture, MVC, MVVM; diagramas de clases
+        y de flujo; pruebas unitarias (JUnit)
+      </p>
+      <p class="skill"><b>Cloud y despliegue:</b> Azure, Vercel, Render</p>
+      <p class="skill">
+        <b>Herramientas y control de versiones:</b> Git, GitHub, SourceTree; IntelliJ, Eclipse,
+        Visual Studio, VS Code, Android Studio; Postman
+      </p>
+      <p class="skill">
+        <b>Sistemas, redes y seguridad:</b> Administración de SO monopuesto (Windows, Ubuntu,
+        Debian, Kali) y en red (Active Directory, LDAP); servicios de red (DNS, DHCP, S/FTP,
+        HTTP/S, NAT, SSH, correo, redes inalámbricas) en Windows Server y Ubuntu Server; seguridad
+        activa y pasiva, detección de vulnerabilidades, cifrado y recuperación de datos
+      </p>
+      <p class="skill">
+        <b>Otros:</b> Desarrollo de videojuegos 2D/3D con Unity (iniciación); CMS (WordPress,
+        JTL); ofimática y edición multimedia (Microsoft Office, LibreOffice, GIMP, Audacity,
+        Kdenlive)
+      </p>
+    </section>
+
+    <section>
+      <h2>Experiencia</h2>
+
+      <div class="job">
+        <div class="job__head">
+          <span class="job__title"
+            >Contractor – Integración de Sistemas e Interoperabilidad de Datos (Prácticas FCT)</span
+          >
+          <span class="job__dates">29/04/2025 – 30/05/2025 y 03/03/2026 – 21/05/2026</span>
+        </div>
+        <p class="job__org">Accenture · Sevilla, España</p>
+        <p class="job__lead">Competencias/funciones desarrolladas:</p>
+        <ul>
+          <li>
+            Formación teórica y práctica en los estándares de interoperabilidad de datos
+            sanitarios HL7 v2 y FHIR R5.
+          </li>
+          <li>Creación de perfiles y extensiones FHIR con la herramienta Forge.</li>
+          <li>
+            Creación de Guías de Implementación orientadas a la migración de datos de HL7 v2.5 a
+            FHIR R5; usando Jekyll (Ruby), FSH y SUSHI.
+          </li>
+          <li>
+            Consultas y operaciones CRUD sobre servidores FHIR/HL7 y colas Kafka mediante Postman.
+          </li>
+          <li>
+            Desarrollo de una aplicación en Java con HAPI: consumidor de mensajes HL7 v2.5 desde
+            una cola Kafka, con mapeo a recursos FHIR R5 mediante clases DTO y Service, y
+            publicación/actualización en el servidor FHIR.
+          </li>
+          <li>
+            Análisis de implementaciones HL7 existentes en hospitales y organismos de salud,
+            generando informes detallados (Excel, Word) sobre el diseño de recursos equivalentes
+            en FHIR R5, sirviendo de base para las Guías de Implementación desarrolladas.
+          </li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job__head">
+          <span class="job__title">Técnico Informático (Prácticas FCT)</span>
+          <span class="job__dates">21/03/2024 – 17/06/2024</span>
+        </div>
+        <p class="job__org">VAIS-Concepts · Berlín, Alemania</p>
+        <p class="job__lead">Competencias/funciones desarrolladas:</p>
+        <ul>
+          <li>Elaboración de presupuestos para comprar equipos, periféricos, componentes…</li>
+          <li>Estudios de mercado para la venta de hardware de segunda mano.</li>
+          <li>Instalación y configuración de Sistemas Operativos.</li>
+          <li>
+            Desarrollo web con HTML, CSS y JavaScript (orientado tanto al desarrollo desde cero
+            como a la implementación de nuevas funcionalidades a webs existentes).
+          </li>
+          <li>
+            Mantenimiento de sitios web tanto con CMS (WordPress y JTL) como con código (HTML,
+            CSS, JS).
+          </li>
+          <li>
+            Creación de contenido para las redes sociales y estrategias de marketing del grupo
+            empresarial de la compañía (edición de imagen y vídeo).
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certificaciones</h2>
+
+      <div class="cert">
+        <div class="cert__head">
+          <span class="cert__title">IBM Mainframe Developer — Certificado Profesional</span>
+          <span class="cert__meta">Coursera (IBM &amp; LearnQuest) · jul. 2026</span>
+        </div>
+        <p class="cert__detail">
+          Programa profesional de 7 cursos: Introduction to Enterprise Computing; IBM COBOL
+          Basics, Core, Software Development Practices, Data and File Management, Basic Testing and
+          Debugging y Software Development Process. Credencial 6H1WOWBXU124.
+        </p>
+      </div>
+
+      <div class="cert">
+        <div class="cert__head">
+          <span class="cert__title">COBOL Programming with VSCode</span>
+          <span class="cert__meta">Curso autorizado por IBM · Coursera · jul. 2026</span>
+        </div>
+        <p class="cert__detail">
+          Desarrollo COBOL moderno sobre VS Code con el tooling de IBM Z. Credencial M1PVHYX29Y0R.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Formación</h2>
+      <div class="row">
+        <span>
+          <span class="row__title">CFGS Desarrollo de Aplicaciones Multiplataforma</span><br />
+          <span class="row__org">IES Nervión</span>
+        </span>
+        <span class="row__dates">16/09/2024 – 22/06/2026</span>
+      </div>
+      <div class="row">
+        <span>
+          <span class="row__title">CFGM Sistemas Microinformáticos y Redes</span><br />
+          <span class="row__org">IES Delgado Hernández</span>
+        </span>
+        <span class="row__dates">16/09/2022 – 20/06/2024</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Idiomas</h2>
+      <p class="lang"><b>Inglés</b> — B2 (Cambridge First)</p>
+      <p class="lang"><b>Alemán</b> — B1 escrito (Goethe-Zertifikat B1)</p>
+    </section>
+  </body>
+</html>

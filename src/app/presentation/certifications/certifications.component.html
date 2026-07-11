@@ -1,0 +1,39 @@
+<section id="certifications" class="certs" appReveal (revealed)="reveal()">
+  <div class="certs__inner">
+    <div class="certs__head" [@fadeUp]="revealState()">
+      <p class="section-tag">// certificaciones</p>
+      <h2 class="section-title">Certificaciones</h2>
+    </div>
+
+    @if (revealState() === 'visible') {
+      <div class="certs__grid" [@listStagger]>
+        @for (cert of certifications; track cert.id) {
+          <a
+            class="card"
+            [href]="cert.verifyUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="card__index" aria-hidden="true">
+              {{ formatIndex(cert.index) }}
+            </span>
+            <span class="card__kind">{{ cert.kind }}</span>
+            <h3 class="card__title">{{ cert.title }}</h3>
+            <p class="card__meta">{{ cert.issuer }} · {{ cert.date }}</p>
+            <p class="card__desc">{{ cert.description }}</p>
+
+            @if (cert.courses.length > 0) {
+              <ul class="card__courses">
+                @for (course of cert.courses; track course) {
+                  <li class="chip">{{ course }}</li>
+                }
+              </ul>
+            }
+
+            <span class="card__link">Verificar credencial →</span>
+          </a>
+        }
+      </div>
+    }
+  </div>
+</section>
