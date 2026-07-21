@@ -26,6 +26,7 @@ export const PROFILE: Profile = {
     'Node.js / NestJS',
     'TypeScript',
     'Angular',
+    'React',
     'React Native',
     'Kotlin / Jetpack Compose',
     'Flutter',
@@ -38,7 +39,7 @@ export const PROFILE: Profile = {
 };
 
 export const STATS: readonly Stat[] = [
-  { id: 'projects', value: 6, suffix: '', label: 'Proyectos públicos' },
+  { id: 'projects', value: 7, suffix: '', label: 'Proyectos públicos' },
   { id: 'languages', value: 9, suffix: '', label: 'Lenguajes de programación' },
   { id: 'stacks', value: 7, suffix: '', label: 'Frameworks y stacks' },
 ];

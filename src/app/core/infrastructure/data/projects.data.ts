@@ -15,8 +15,21 @@ export const PROJECTS: readonly Project[] = [
     githubUrl: 'https://github.com/AOjeda006/NexusMQ',
   },
   {
-    id: 'plants-app',
+    id: 'nexusmq-console',
     index: 2,
+    category: 'observabilidad & admin',
+    title: 'NexusMQ Console — Consola de administración',
+    description:
+      'Consola web de administración y monitorización de NexusMQ. SPA en React + ' +
+      'TypeScript sobre un BFF NestJS que confina el JWT en el servidor y termina el ' +
+      'SSE de métricas en vivo; el cliente de la API se genera desde el contrato ' +
+      'OpenAPI del broker y se empaqueta en una sola imagen Docker.',
+    technologies: ['React', 'TypeScript', 'NestJS', 'OpenAPI', 'SSE', 'Docker'],
+    githubUrl: 'https://github.com/AOjeda006/NexusMQ-Console',
+  },
+  {
+    id: 'plants-app',
+    index: 3,
     category: 'full-stack móvil',
     title: 'Plants App — Red social de plantas',
     description:
@@ -28,7 +41,7 @@ export const PROJECTS: readonly Project[] = [
   },
   {
     id: 'erp',
-    index: 3,
+    index: 4,
     category: 'full-stack',
     title: "ERP de gestión de pedidos (Nervion's System)",
     description:
@@ -40,7 +53,7 @@ export const PROJECTS: readonly Project[] = [
   },
   {
     id: 'ajedrez-online',
-    index: 4,
+    index: 5,
     category: 'tiempo real',
     title: 'Ajedrez Online multijugador',
     description:
@@ -52,7 +65,7 @@ export const PROJECTS: readonly Project[] = [
   },
   {
     id: 'gestion-academica',
-    index: 5,
+    index: 6,
     category: 'api rest',
     title: 'API de gestión académica',
     description:
@@ -64,7 +77,7 @@ export const PROJECTS: readonly Project[] = [
   },
   {
     id: 'jetpack-stay-rooms',
-    index: 6,
+    index: 7,
     category: 'android',
     title: 'JetPack Stay Rooms — Reservas (Android)',
     description:
