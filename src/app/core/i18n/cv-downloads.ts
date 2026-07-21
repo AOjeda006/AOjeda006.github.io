@@ -17,3 +17,9 @@ export const CV_DOWNLOADS: readonly CvDownload[] = [
   { locale: 'es', url: 'cv-es.pdf' },
   { locale: 'en', url: 'cv-en.pdf' },
 ];
+
+/**
+ * Nombre con el que se guarda el archivo al descargarlo, con independencia
+ * del idioma del CV (atributo `download` del enlace).
+ */
+export const CV_DOWNLOAD_FILENAME = 'CV_Andres_Ojeda_Rodriguez.pdf';

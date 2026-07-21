@@ -53,7 +53,11 @@
 
       <div class="contact__cv-group">
         @for (cv of cvDownloads; track cv.locale) {
-          <a class="btn btn--primary contact__cv" [href]="cv.url" download>
+          <a
+            class="btn btn--primary contact__cv"
+            [href]="cv.url"
+            [attr.download]="cvDownloadFilename"
+          >
             @switch (cv.locale) {
               @case ('es') {
                 {{ text().contact.cvSpanish }}
