@@ -7,6 +7,4 @@ export interface Profile {
   readonly bio: string;
   /** Technologies rendered as violet-bordered pills. */
   readonly technologies: readonly string[];
-  /** Path/URL to the downloadable CV (PDF). */
-  readonly cvUrl: string;
 }

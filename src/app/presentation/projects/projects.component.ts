@@ -5,6 +5,7 @@ import {
   signal,
 } from '@angular/core';
 import { GetProjectsUseCase } from '../../core/application/use-cases/get-projects.use-case';
+import { LocaleService } from '../../core/i18n/locale.service';
 import { RevealOnScrollDirective } from '../../shared/directives/reveal-on-scroll.directive';
 import { fadeUp, listStagger } from '../../shared/animations/reveal.animations';
 
@@ -19,6 +20,7 @@ import { fadeUp, listStagger } from '../../shared/animations/reveal.animations';
 })
 export class ProjectsComponent {
   protected readonly projects = inject(GetProjectsUseCase).execute();
+  protected readonly text = inject(LocaleService).text;
   protected readonly revealState = signal<'hidden' | 'visible'>('hidden');
 
   reveal(): void {

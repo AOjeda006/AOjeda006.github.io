@@ -6,25 +6,25 @@
   (revealed)="reveal()"
 >
   <div class="hero__inner">
-    <p class="hero__eyebrow">{{ profile.role }}</p>
+    <p class="hero__eyebrow">{{ profile().role }}</p>
 
     <h1 class="hero__title">
-      @for (line of headlineLines; track line) {
+      @for (line of text().hero.headlineLines; track line) {
         <span class="hero__title-line">{{ line }}</span>
       }
     </h1>
 
-    <p class="hero__subtitle">{{ subtitle }}</p>
+    <p class="hero__subtitle">{{ text().hero.subtitle }}</p>
 
     <div class="hero__actions">
       <button type="button" class="btn btn--primary" (click)="goToProjects()">
-        Ver proyectos
+        {{ text().hero.ctaProjects }}
       </button>
       <button type="button" class="btn btn--ghost" (click)="goToContact()">
-        Hablemos
+        {{ text().hero.ctaContact }}
       </button>
     </div>
   </div>
 
-  <span class="hero__decoration" aria-hidden="true">{{ decorativeText }}</span>
+  <span class="hero__decoration" aria-hidden="true">{{ text().hero.decoration }}</span>
 </section>

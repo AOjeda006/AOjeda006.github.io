@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Andrés Ojeda Rodríguez — CV</title>
+    <style>
+      /* =====================================================================
+         English source of Andrés Ojeda Rodríguez's CV.
+         Printable to PDF (A4, 2 pages) with headless Chrome.
+         See cv/README.md to regenerate public/cv-en.pdf and docs/cv-en.pdf.
+         Keep in sync with cv/cv.html (Spanish source).
+         ===================================================================== */
+      :root {
+        --ink: #1f2933;
+        --muted: #55606b;
+        --accent: #2f6b7a; /* petróleo/teal de la marca del CV */
+        --rule: #cfd8dc;
+      }
+
+      @page {
+        size: A4;
+        margin: 14mm 15mm;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Segoe UI', Carlito, Calibri, 'Helvetica Neue', Arial, sans-serif;
+        color: var(--ink);
+        font-size: 10.4pt;
+        line-height: 1.34;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      /* -------- Header -------- */
+      .name {
+        font-size: 25pt;
+        font-weight: 700;
+        color: var(--accent);
+        letter-spacing: -0.01em;
+        margin: 0;
+      }
+
+      .contact {
+        margin: 4pt 0 0;
+        font-size: 9.4pt;
+        color: var(--muted);
+      }
+
+      .contact span {
+        white-space: nowrap;
+      }
+
+      /* -------- Portfolio callout (high visibility) -------- */
+      .portfolio {
+        margin-top: 9pt;
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 3pt 9pt;
+        padding: 7pt 11pt;
+        background: #eef4f6;
+        border-left: 3px solid var(--accent);
+        border-radius: 3px;
+      }
+
+      .portfolio__label {
+        font-size: 8.4pt;
+        font-weight: 700;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .portfolio__url {
+        font-size: 11.5pt;
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      .portfolio__note {
+        font-size: 9.1pt;
+        color: var(--muted);
+      }
+
+      /* -------- Sections -------- */
+      section {
+        margin-top: 13pt;
+      }
+
+      h2 {
+        font-size: 11pt;
+        font-weight: 700;
+        color: var(--accent);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 0 0 6pt;
+        padding-bottom: 3pt;
+        border-bottom: 1px solid var(--rule);
+        /* A heading is never orphaned at the foot of a page: it drags the
+           first element of its section to the next page with it. */
+        break-after: avoid;
+        break-inside: avoid;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .profile {
+        text-align: justify;
+      }
+
+      /* -------- Skills / labeled lists -------- */
+      .skill {
+        margin: 0 0 4pt;
+      }
+
+      .skill b {
+        color: var(--ink);
+      }
+
+      /* -------- Certifications -------- */
+      .cert {
+        margin: 0 0 6pt;
+      }
+
+      .cert__head {
+        display: flex;
+        justify-content: space-between;
+        gap: 12pt;
+        align-items: baseline;
+      }
+
+      .cert__title {
+        font-weight: 700;
+      }
+
+      .cert__meta {
+        color: var(--muted);
+        font-size: 9.2pt;
+        white-space: nowrap;
+      }
+
+      .cert__detail {
+        color: var(--muted);
+        font-size: 9.4pt;
+        margin-top: 1pt;
+      }
+
+      /* -------- Experience -------- */
+      .job {
+        margin-bottom: 9pt;
+      }
+
+      .job__head {
+        display: flex;
+        justify-content: space-between;
+        gap: 12pt;
+        align-items: baseline;
+      }
+
+      .job__title {
+        font-weight: 700;
+      }
+
+      .job__dates {
+        color: var(--muted);
+        font-size: 9.2pt;
+        white-space: nowrap;
+      }
+
+      .job__org {
+        font-style: italic;
+        color: var(--accent);
+        font-size: 9.6pt;
+        margin: 1pt 0 3pt;
+      }
+
+      .job__lead {
+        color: var(--muted);
+        font-size: 9.4pt;
+        margin-bottom: 2pt;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 16pt;
+      }
+
+      li {
+        margin-bottom: 1.5pt;
+      }
+
+      /* -------- Education / languages -------- */
+      .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12pt;
+        align-items: baseline;
+        margin-bottom: 5pt;
+      }
+
+      .row__title {
+        font-weight: 700;
+      }
+
+      .row__org {
+        font-style: italic;
+        color: var(--accent);
+        font-size: 9.6pt;
+      }
+
+      .row__dates {
+        color: var(--muted);
+        font-size: 9.2pt;
+        white-space: nowrap;
+      }
+
+      .lang {
+        margin-bottom: 3pt;
+      }
+
+      .lang b {
+        color: var(--ink);
+      }
+
+      /* Avoid ugly block breaks between pages */
+      .job,
+      .cert,
+      .row {
+        break-inside: avoid;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="name">Andrés Ojeda Rodríguez</h1>
+      <p class="contact">
+        <span>Almonte (Huelva), 21730</span> &nbsp;|&nbsp;
+        <span>+34 722 35 96 90</span> &nbsp;|&nbsp;
+        <span>andresojedarodriguez@gmail.com</span>
+      </p>
+    </header>
+
+    <div class="portfolio">
+      <span class="portfolio__label">Portfolio</span>
+      <a class="portfolio__url" href="https://aojeda006.github.io/">aojeda006.github.io</a>
+      <span class="portfolio__note"
+        >— Explore my work in detail: featured projects, how I build them and the decisions
+        behind them.</span
+      >
+    </div>
+
+    <section>
+      <h2>Professional profile</h2>
+      <p class="profile">
+        Full-stack developer able to design and build complete, well-structured and maintainable
+        applications, applying SOLID principles and Clean Architecture. Experienced in healthcare
+        data interoperability under the HL7 v2 and FHIR R5 standards, gained at Accenture migrating
+        and mapping clinical data between both standards. Recently certified as an
+        <b>IBM Mainframe Developer</b> (COBOL and IBM Z), broadening my profile towards enterprise
+        computing and the maintenance of mission-critical legacy systems. A serious, professional
+        profile, with ambition and full willingness to train in whatever the role requires.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technical skills</h2>
+      <p class="skill">
+        <b>Healthcare data interoperability (HL7/FHIR):</b> HL7 v2/v2.5 and FHIR R5 standards; FHIR
+        resources and data exchange in XML and JSON; FHIR profile and extension modeling with
+        Forge; Implementation Guides with FSH, SUSHI and Jekyll; messaging and integration with
+        Kafka and HAPI (Java)
+      </p>
+      <p class="skill">
+        <b>Languages:</b> Java, C#, Python, Kotlin, C++, COBOL, JavaScript/TypeScript, SQL/T-SQL
+      </p>
+      <p class="skill">
+        <b>Mainframe / Enterprise computing:</b> COBOL (fundamentals, core, data and file
+        management, testing and debugging); IBM Z and software development life cycle (SDLC)
+        concepts in a mainframe environment; modern COBOL development with VS Code (IBM Z Open
+        Editor)
+      </p>
+      <p class="skill">
+        <b>Frontend:</b> Angular, React Native, Flutter, HTML, CSS, jQuery, AJAX, JSON; Jetpack
+        Compose (native Android)
+      </p>
+      <p class="skill">
+        <b>Backend and APIs:</b> ASP.NET (C#), Spring (Java), NestJS (Node/TypeScript), FastAPI
+        (Python); web services and REST APIs (HTTP), concurrent programming (multiprocessing),
+        persistence with JDBC and JPA
+      </p>
+      <p class="skill">
+        <b>Databases:</b> MySQL, SQL Server, MongoDB, Access; Entity-Relationship modeling,
+        normalization and physical model; stored procedures, functions, triggers, cursors and
+        transactions (T-SQL)
+      </p>
+      <p class="skill">
+        <b>Architecture and quality:</b> SOLID, Clean Architecture, MVC, MVVM; class and flow
+        diagrams; unit testing (JUnit)
+      </p>
+      <p class="skill"><b>Cloud and deployment:</b> Azure, Vercel, Render</p>
+      <p class="skill">
+        <b>Tools and version control:</b> Git, GitHub, SourceTree; IntelliJ, Eclipse, Visual
+        Studio, VS Code, Android Studio; Postman
+      </p>
+      <p class="skill">
+        <b>Systems, networking and security:</b> Single-workstation OS administration (Windows,
+        Ubuntu, Debian, Kali) and networked (Active Directory, LDAP); network services (DNS, DHCP,
+        S/FTP, HTTP/S, NAT, SSH, mail, wireless networks) on Windows Server and Ubuntu Server;
+        active and passive security, vulnerability detection, encryption and data recovery
+      </p>
+      <p class="skill">
+        <b>Other:</b> 2D/3D game development with Unity (introductory); CMS (WordPress, JTL); office
+        and multimedia editing (Microsoft Office, LibreOffice, GIMP, Audacity, Kdenlive)
+      </p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="job__head">
+          <span class="job__title"
+            >Contractor – System Integration and Data Interoperability (FCT internship)</span
+          >
+          <span class="job__dates">29/04/2025 – 30/05/2025 and 03/03/2026 – 21/05/2026</span>
+        </div>
+        <p class="job__org">Accenture · Seville, Spain</p>
+        <p class="job__lead">Skills / duties developed:</p>
+        <ul>
+          <li>
+            Theoretical and practical training in the HL7 v2 and FHIR R5 healthcare data
+            interoperability standards.
+          </li>
+          <li>Creation of FHIR profiles and extensions with the Forge tool.</li>
+          <li>
+            Creation of Implementation Guides for migrating data from HL7 v2.5 to FHIR R5, using
+            Jekyll (Ruby), FSH and SUSHI.
+          </li>
+          <li>
+            Queries and CRUD operations against FHIR/HL7 servers and Kafka queues using Postman.
+          </li>
+          <li>
+            Development of a Java application with HAPI: a consumer of HL7 v2.5 messages from a
+            Kafka queue, mapping them to FHIR R5 resources via DTO and Service classes, and
+            publishing/updating them on the FHIR server through its REST web services
+            (HTTP, XML/JSON).
+          </li>
+          <li>
+            Analysis of existing HL7 implementations in hospitals and health organizations,
+            producing detailed reports (Excel, Word) on the design of equivalent resources in FHIR
+            R5, serving as the basis for the Implementation Guides developed.
+          </li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job__head">
+          <span class="job__title">IT Technician (FCT internship)</span>
+          <span class="job__dates">21/03/2024 – 17/06/2024</span>
+        </div>
+        <p class="job__org">VAIS-Concepts · Berlin, Germany</p>
+        <p class="job__lead">Skills / duties developed:</p>
+        <ul>
+          <li>Preparing quotes to purchase equipment, peripherals, components…</li>
+          <li>Market research for selling second-hand hardware.</li>
+          <li>Installation and configuration of operating systems.</li>
+          <li>
+            Web development with HTML, CSS and JavaScript (both building from scratch and adding new
+            features to existing websites).
+          </li>
+          <li>
+            Website maintenance both with CMS (WordPress and JTL) and with code (HTML, CSS, JS).
+          </li>
+          <li>
+            Creating content for the social media and marketing strategies of the company's
+            business group (image and video editing).
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+
+      <div class="cert">
+        <div class="cert__head">
+          <span class="cert__title">IBM Mainframe Developer — Professional Certificate</span>
+          <span class="cert__meta">IBM &amp; LearnQuest (Coursera) · Jul 2026</span>
+        </div>
+        <p class="cert__detail">
+          7-course professional program: Introduction to Enterprise Computing; IBM COBOL Basics,
+          Core, Software Development Practices, Data and File Management, Basic Testing and
+          Debugging, and Software Development Process. Credential 6H1WOWBXU124.
+        </p>
+      </div>
+
+      <div class="cert">
+        <div class="cert__head">
+          <span class="cert__title">COBOL Programming with VSCode</span>
+          <span class="cert__meta">IBM (Coursera) · Jul 2026</span>
+        </div>
+        <p class="cert__detail">
+          Modern COBOL development on VS Code with IBM Z tooling. Credential M1PVHYX29Y0R.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="row">
+        <span>
+          <span class="row__title"
+            >Higher National Diploma in Cross-Platform Application Development</span
+          ><br />
+          <span class="row__org">IES Nervión</span>
+        </span>
+        <span class="row__dates">16/09/2024 – 22/06/2026</span>
+      </div>
+      <div class="row">
+        <span>
+          <span class="row__title"
+            >Intermediate Vocational Diploma in Microcomputer Systems and Networks</span
+          ><br />
+          <span class="row__org">IES Delgado Hernández</span>
+        </span>
+        <span class="row__dates">16/09/2022 – 20/06/2024</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <p class="lang"><b>English</b> — B2 (Cambridge First)</p>
+      <p class="lang"><b>German</b> — B1 written (Goethe-Zertifikat B1)</p>
+    </section>
+  </body>
+</html>

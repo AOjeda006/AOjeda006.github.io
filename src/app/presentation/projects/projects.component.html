@@ -1,13 +1,13 @@
 <section id="projects" class="projects" appReveal (revealed)="reveal()">
   <div class="projects__inner">
     <div class="projects__head" [@fadeUp]="revealState()">
-      <p class="section-tag">// proyectos</p>
-      <h2 class="section-title">Proyectos personales</h2>
+      <p class="section-tag">{{ text().projects.tag }}</p>
+      <h2 class="section-title">{{ text().projects.title }}</h2>
     </div>
 
     @if (revealState() === 'visible') {
       <div class="projects__grid" [@listStagger]>
-        @for (project of projects; track project.id) {
+        @for (project of projects(); track project.id) {
           <a
             class="card"
             [href]="project.githubUrl"
@@ -27,7 +27,7 @@
               }
             </ul>
 
-            <span class="card__link">Ver en GitHub →</span>
+            <span class="card__link">{{ text().projects.cardLink }}</span>
           </a>
         }
       </div>

@@ -1,6 +1,8 @@
 /* eslint-disable */
-// Genera el CV en PDF a partir de la fuente HTML (cv/cv.html) usando Chrome
-// headless, y lo publica en public/cv.pdf y docs/cv.pdf.
+// Genera el CV en PDF a partir de sus fuentes HTML (cv/cv.html en español y
+// cv/cv.en.html en inglés) usando Chrome headless, y los publica en public/ y
+// docs/ como cv-es.pdf y cv-en.pdf. Además copia el español a cv.pdf para
+// mantener compatibilidad con enlaces antiguos.
 //
 // Chrome se localiza, por orden, con: la variable de entorno CHROME_BIN, la
 // instalación de Playwright bajo PLAYWRIGHT_BROWSERS_PATH, o el chromium/chrome
@@ -10,8 +12,16 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
-const source = path.join(root, 'cv', 'cv.html');
-const targets = [path.join(root, 'public', 'cv.pdf'), path.join(root, 'docs', 'cv.pdf')];
+const outDirs = [path.join(root, 'public'), path.join(root, 'docs')];
+
+// CVs a generar: cada fuente produce un PDF con el nombre indicado.
+const cvs = [
+  { source: path.join(root, 'cv', 'cv.html'), name: 'cv-es.pdf' },
+  { source: path.join(root, 'cv', 'cv.en.html'), name: 'cv-en.pdf' },
+];
+
+// Alias de compatibilidad: cv.pdf sigue apuntando al CV en español.
+const aliases = [{ from: 'cv-es.pdf', to: 'cv.pdf' }];
 
 /** Localiza un ejecutable de Chrome/Chromium en el sistema. */
 function findChrome() {
@@ -41,15 +51,8 @@ function findChrome() {
   );
 }
 
-function main() {
-  if (!fs.existsSync(source)) {
-    console.error(`[build-cv] No existe la fuente ${source}`);
-    process.exit(1);
-  }
-
-  const chrome = findChrome();
-  const output = targets[0];
-
+/** Imprime una fuente HTML a un PDF con Chrome headless. */
+function printToPdf(chrome, source, output) {
   execFileSync(
     chrome,
     [
@@ -62,14 +65,40 @@ function main() {
     ],
     { stdio: ['ignore', 'ignore', 'ignore'] },
   );
+}
 
-  for (const target of targets.slice(1)) {
-    fs.mkdirSync(path.dirname(target), { recursive: true });
-    fs.copyFileSync(output, target);
+function main() {
+  for (const dir of outDirs) {
+    fs.mkdirSync(dir, { recursive: true });
   }
 
-  console.log(`[build-cv] Generado ${path.relative(root, output)} con ${path.basename(chrome)}`);
-  console.log(`[build-cv] Copiado a: ${targets.map((t) => path.relative(root, t)).join(', ')}`);
+  const chrome = findChrome();
+  const generated = [];
+
+  for (const cv of cvs) {
+    if (!fs.existsSync(cv.source)) {
+      console.error(`[build-cv] No existe la fuente ${cv.source}`);
+      process.exit(1);
+    }
+
+    // Genera en el primer directorio y copia al resto (evita relanzar Chrome).
+    const primary = path.join(outDirs[0], cv.name);
+    printToPdf(chrome, cv.source, primary);
+    for (const dir of outDirs.slice(1)) {
+      fs.copyFileSync(primary, path.join(dir, cv.name));
+    }
+    generated.push(cv.name);
+  }
+
+  for (const alias of aliases) {
+    for (const dir of outDirs) {
+      fs.copyFileSync(path.join(dir, alias.from), path.join(dir, alias.to));
+    }
+    generated.push(`${alias.to} (alias de ${alias.from})`);
+  }
+
+  console.log(`[build-cv] Generado con ${path.basename(chrome)}: ${generated.join(', ')}`);
+  console.log(`[build-cv] En: ${outDirs.map((d) => path.relative(root, d)).join(', ')}`);
 }
 
 main();

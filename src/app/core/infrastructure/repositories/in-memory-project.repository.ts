@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Project } from '../../domain/models/project.model';
 import { ProjectRepository } from '../../domain/repositories/project.repository';
+import { Locale } from '../../i18n/locale';
 import { PROJECTS } from '../data/projects.data';
 
 /**
@@ -10,7 +11,7 @@ import { PROJECTS } from '../data/projects.data';
  */
 @Injectable()
 export class InMemoryProjectRepository implements ProjectRepository {
-  getAll(): readonly Project[] {
-    return PROJECTS;
+  getAll(locale: Locale): readonly Project[] {
+    return PROJECTS[locale];
   }
 }

@@ -5,6 +5,7 @@ import {
   signal,
 } from '@angular/core';
 import { GetCertificationsUseCase } from '../../core/application/use-cases/get-certifications.use-case';
+import { LocaleService } from '../../core/i18n/locale.service';
 import { RevealOnScrollDirective } from '../../shared/directives/reveal-on-scroll.directive';
 import { fadeUp, listStagger } from '../../shared/animations/reveal.animations';
 
@@ -19,6 +20,7 @@ import { fadeUp, listStagger } from '../../shared/animations/reveal.animations';
 })
 export class CertificationsComponent {
   protected readonly certifications = inject(GetCertificationsUseCase).execute();
+  protected readonly text = inject(LocaleService).text;
   protected readonly revealState = signal<'hidden' | 'visible'>('hidden');
 
   reveal(): void {

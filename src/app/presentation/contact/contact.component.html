@@ -7,14 +7,9 @@
 >
   <div class="contact__inner">
     <div class="contact__intro">
-      <p class="section-tag">// contacto</p>
-      <h2 class="contact__title">Hagamos que tus sistemas hablen.</h2>
-      <p class="contact__text">
-        ¿Buscas reforzar tu equipo de backend o tienes un proyecto de
-        integración entre sistemas? Estoy abierto a nuevas oportunidades —
-        backend, middleware o full-stack. Escríbeme y respondo en menos de
-        24&nbsp;horas.
-      </p>
+      <p class="section-tag">{{ text().contact.tag }}</p>
+      <h2 class="contact__title">{{ text().contact.title }}</h2>
+      <p class="contact__text">{{ text().contact.text }}</p>
     </div>
 
     <div class="contact__links">
@@ -56,9 +51,20 @@
         </a>
       }
 
-      <a class="btn btn--primary contact__cv" [href]="profile.cvUrl" download>
-        Descargar CV (PDF)
-      </a>
+      <div class="contact__cv-group">
+        @for (cv of cvDownloads; track cv.locale) {
+          <a class="btn btn--primary contact__cv" [href]="cv.url" download>
+            @switch (cv.locale) {
+              @case ('es') {
+                {{ text().contact.cvSpanish }}
+              }
+              @case ('en') {
+                {{ text().contact.cvEnglish }}
+              }
+            }
+          </a>
+        }
+      </div>
     </div>
   </div>
 </section>

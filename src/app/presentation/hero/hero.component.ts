@@ -5,6 +5,7 @@ import {
   signal,
 } from '@angular/core';
 import { GetProfileUseCase } from '../../core/application/use-cases/get-profile.use-case';
+import { LocaleService } from '../../core/i18n/locale.service';
 import { ScrollService } from '../../shared/services/scroll.service';
 import { RevealOnScrollDirective } from '../../shared/directives/reveal-on-scroll.directive';
 import { fadeUp } from '../../shared/animations/reveal.animations';
@@ -22,20 +23,8 @@ export class HeroComponent {
   private readonly scrollService = inject(ScrollService);
 
   protected readonly profile = inject(GetProfileUseCase).execute();
+  protected readonly text = inject(LocaleService).text;
   protected readonly revealState = signal<'hidden' | 'visible'>('hidden');
-
-  // Eslogan corto del hero (el bio completo se muestra solo en "Sobre mí").
-  protected readonly subtitle =
-    'Aplicaciones de extremo a extremo, del backend al front y al móvil.';
-
-  protected readonly headlineLines: readonly string[] = [
-    'Backend que',
-    'conecta',
-    'sistemas.',
-  ];
-
-  // The element is rotated 90deg, so a "→" in source renders as a downward arrow.
-  protected readonly decorativeText = 'desliza → para explorar';
 
   reveal(): void {
     this.revealState.set('visible');

@@ -1,13 +1,13 @@
 <section id="certifications" class="certs" appReveal (revealed)="reveal()">
   <div class="certs__inner">
     <div class="certs__head" [@fadeUp]="revealState()">
-      <p class="section-tag">// certificaciones</p>
-      <h2 class="section-title">Certificaciones</h2>
+      <p class="section-tag">{{ text().certifications.tag }}</p>
+      <h2 class="section-title">{{ text().certifications.title }}</h2>
     </div>
 
     @if (revealState() === 'visible') {
       <div class="certs__grid" [@listStagger]>
-        @for (cert of certifications; track cert.id) {
+        @for (cert of certifications(); track cert.id) {
           <a
             class="card"
             [href]="cert.verifyUrl"
@@ -30,7 +30,7 @@
               </ul>
             }
 
-            <span class="card__link">Verificar credencial →</span>
+            <span class="card__link">{{ text().certifications.cardLink }}</span>
           </a>
         }
       </div>

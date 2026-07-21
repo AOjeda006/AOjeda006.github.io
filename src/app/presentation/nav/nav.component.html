@@ -5,7 +5,7 @@
     </button>
 
     <ul class="nav__links" [class.nav__links--open]="menuOpen()">
-      @for (link of links; track link.id) {
+      @for (link of links(); track link.id) {
         <li>
           <button type="button" class="nav__link" (click)="navigateTo(link.id)">
             {{ link.label }}
@@ -14,17 +14,33 @@
       }
     </ul>
 
-    <button
-      type="button"
-      class="nav__burger"
-      [class.nav__burger--open]="menuOpen()"
-      [attr.aria-expanded]="menuOpen()"
-      aria-label="Alternar menú de navegación"
-      (click)="toggleMenu()"
-    >
-      <span class="nav__burger-bar"></span>
-      <span class="nav__burger-bar"></span>
-      <span class="nav__burger-bar"></span>
-    </button>
+    <div class="nav__actions">
+      <div class="nav__lang" role="group" [attr.aria-label]="text().nav.languageAria">
+        @for (code of locales; track code) {
+          <button
+            type="button"
+            class="nav__lang-btn"
+            [class.nav__lang-btn--active]="locale() === code"
+            [attr.aria-pressed]="locale() === code"
+            (click)="setLocale(code)"
+          >
+            {{ code | uppercase }}
+          </button>
+        }
+      </div>
+
+      <button
+        type="button"
+        class="nav__burger"
+        [class.nav__burger--open]="menuOpen()"
+        [attr.aria-expanded]="menuOpen()"
+        [attr.aria-label]="text().nav.menuAria"
+        (click)="toggleMenu()"
+      >
+        <span class="nav__burger-bar"></span>
+        <span class="nav__burger-bar"></span>
+        <span class="nav__burger-bar"></span>
+      </button>
+    </div>
   </div>
 </nav>

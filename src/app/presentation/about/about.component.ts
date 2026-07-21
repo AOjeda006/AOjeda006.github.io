@@ -6,6 +6,7 @@ import {
 } from '@angular/core';
 import { GetProfileUseCase } from '../../core/application/use-cases/get-profile.use-case';
 import { GetStatsUseCase } from '../../core/application/use-cases/get-stats.use-case';
+import { LocaleService } from '../../core/i18n/locale.service';
 import { CountUpDirective } from '../../shared/directives/count-up.directive';
 import { RevealOnScrollDirective } from '../../shared/directives/reveal-on-scroll.directive';
 import { fadeUp } from '../../shared/animations/reveal.animations';
@@ -22,6 +23,7 @@ import { fadeUp } from '../../shared/animations/reveal.animations';
 export class AboutComponent {
   protected readonly profile = inject(GetProfileUseCase).execute();
   protected readonly stats = inject(GetStatsUseCase).execute();
+  protected readonly text = inject(LocaleService).text;
   protected readonly revealState = signal<'hidden' | 'visible'>('hidden');
 
   reveal(): void {

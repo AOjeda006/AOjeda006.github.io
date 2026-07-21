@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Certification } from '../../domain/models/certification.model';
 import { CertificationRepository } from '../../domain/repositories/certification.repository';
+import { Locale } from '../../i18n/locale';
 import { CERTIFICATIONS } from '../data/certifications.data';
 
 /**
@@ -10,7 +11,7 @@ import { CERTIFICATIONS } from '../data/certifications.data';
  */
 @Injectable()
 export class InMemoryCertificationRepository implements CertificationRepository {
-  getAll(): readonly Certification[] {
-    return CERTIFICATIONS;
+  getAll(locale: Locale): readonly Certification[] {
+    return CERTIFICATIONS[locale];
   }
 }

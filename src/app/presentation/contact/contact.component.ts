@@ -4,8 +4,9 @@ import {
   inject,
   signal,
 } from '@angular/core';
-import { GetProfileUseCase } from '../../core/application/use-cases/get-profile.use-case';
 import { GetSocialLinksUseCase } from '../../core/application/use-cases/get-social-links.use-case';
+import { LocaleService } from '../../core/i18n/locale.service';
+import { CV_DOWNLOADS } from '../../core/i18n/cv-downloads';
 import { RevealOnScrollDirective } from '../../shared/directives/reveal-on-scroll.directive';
 import { fadeUp } from '../../shared/animations/reveal.animations';
 
@@ -20,7 +21,8 @@ import { fadeUp } from '../../shared/animations/reveal.animations';
 })
 export class ContactComponent {
   protected readonly socialLinks = inject(GetSocialLinksUseCase).execute();
-  protected readonly profile = inject(GetProfileUseCase).execute();
+  protected readonly text = inject(LocaleService).text;
+  protected readonly cvDownloads = CV_DOWNLOADS;
   protected readonly revealState = signal<'hidden' | 'visible'>('hidden');
 
   reveal(): void {

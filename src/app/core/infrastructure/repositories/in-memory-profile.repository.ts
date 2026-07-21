@@ -3,6 +3,7 @@ import { Profile } from '../../domain/models/profile.model';
 import { Stat } from '../../domain/models/stat.model';
 import { SocialLink } from '../../domain/models/social-link.model';
 import { ProfileRepository } from '../../domain/repositories/profile.repository';
+import { Locale } from '../../i18n/locale';
 import { PROFILE, SOCIAL_LINKS, STATS } from '../data/profile.data';
 
 /**
@@ -10,12 +11,12 @@ import { PROFILE, SOCIAL_LINKS, STATS } from '../data/profile.data';
  */
 @Injectable()
 export class InMemoryProfileRepository implements ProfileRepository {
-  getProfile(): Profile {
-    return PROFILE;
+  getProfile(locale: Locale): Profile {
+    return PROFILE[locale];
   }
 
-  getStats(): readonly Stat[] {
-    return STATS;
+  getStats(locale: Locale): readonly Stat[] {
+    return STATS[locale];
   }
 
   getSocialLinks(): readonly SocialLink[] {
