@@ -111,6 +111,10 @@
         margin: 0 0 6pt;
         padding-bottom: 3pt;
         border-bottom: 1px solid var(--rule);
+        /* Un encabezado nunca queda huérfano al pie de página: arrastra
+           consigo el primer elemento de su sección a la página siguiente. */
+        break-after: avoid;
+        break-inside: avoid;
       }
 
       p {
